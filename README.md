@@ -2,6 +2,9 @@
 ![Termux](https://img.shields.io/badge/Termux-Android-green)
 ![Status](https://img.shields.io/badge/Status-Beta-orange)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
+
+Z-Agent-Termux 以 shadow_test 与 boot_guard 双闸门防宕机：shadow_test 在隔离沙箱中用假 LLM 驱动候选代码跑完整会话并断言运行时不变量，失败即拒绝落盘；boot_guard 独立于主程序，在启动前做 AST、符号和冒烟自检，通过则快照 last_good，失败则原子回滚并复检。前者守住进化入口，后者守住启动入口，二者串联确保改崩也能回到最近可用版本，系统始终可启动。
+
 💡 为什么做这个项目？
 在 Android 手机上跑 AI Agent，最怕的就是“代码改崩了，救不回来”。
 本项目实现了看门狗（boot_guard）+ 影子沙箱（shadow_test），即便改到启动崩溃，也能自动回滚。这是一套带自愈能力的移动端 Agent 实验架构。
