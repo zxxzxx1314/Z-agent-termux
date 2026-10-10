@@ -1,8 +1,38 @@
+![Python](https://img.shields.io/badge/Python-3.7%2B-blue)
+![Termux](https://img.shields.io/badge/Termux-Android-green)
+![Status](https://img.shields.io/badge/Status-Beta-orange)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
+Z-Agent-Termux 以 shadow_test 与 boot_guard 双闸门防宕机：shadow_test 在隔离沙箱中用假 LLM 驱动候选代码跑完整会话并断言运行时不变量，失败即拒绝落盘；boot_guard 独立于主程序，在启动前做 AST、符号和冒烟自检，通过则快照 last_good，失败则原子回滚并复检。前者守住进化入口，后者守住启动入口，二者串联确保改崩也能回到最近可用版本，系统始终可启动。
+
+💡 为什么做这个项目？
+在 Android 手机上跑 AI Agent，最怕的就是“代码改崩了，救不回来”。
+本项目实现了看门狗（boot_guard）+ 影子沙箱（shadow_test），即便改到启动崩溃，也能自动回滚。这是一套带自愈能力的移动端 Agent 实验架构。
+> [!IMPORTANT]
+> **🎉 欢迎加入 Z-Agent 专属交流 QQ 群！**
+> 群号：**1072611451**
+> 遇到问题、想交流 Agent 开发心得，或者想获取最新更新？快来加入我们！
+
+---
 【Z-Agent v6.1 超级智能终端 · 部署与使用说明书】
 
 欢迎体验！
 这是一个运行在 Android Termux 上的超级自主智能体。它不仅是一个脚本，它拥有心智（记忆/身份）、基因（源码）和能力（插件）。
 最核心的是，它自带看门狗（boot_guard）和影子沙箱（shadow_test），即使改崩了也能瞬间回滚，拥有极强的自愈能力。
+## 🚀 手机跑 AI Agent 指南（快速上手）
+
+1. 打开 Termux，安装基础环境：
+   `pkg install python unzip -y`
+2. 克隆项目代码到本地：
+   `git clone https://github.com/zxxzxx1314/Z-agent-termux.git`
+3. 进入目录并配置 API 密钥（按提示粘贴自己的 Key）：
+   `cd Z-agent-termux && ./switch_api.sh`
+4. 一键启动智能体：
+   `./start_agent.sh`
+   ## 🧩 核心架构代码索引
+
+· [zguard/boot_guard.py](https://raw.githubusercontent.com/.../zguard/boot_guard.py)：看门狗，负责启动前快照与崩溃自动回滚。
+· [zguard/shadow_test.py](https://raw.githubusercontent.com/.../zguard/shadow_test.py)：影子沙箱，负责变异代码的逻辑安全验证。
 
 【第一步：环境准备】（仅需 3 分钟）
 
