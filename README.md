@@ -16,7 +16,20 @@
 欢迎体验！
 这是一个运行在 Android Termux 上的超级自主智能体。它不仅是一个脚本，它拥有心智（记忆/身份）、基因（源码）和能力（插件）。
 最核心的是，它自带看门狗（boot_guard）和影子沙箱（shadow_test），即使改崩了也能瞬间回滚，拥有极强的自愈能力。
+## 🚀 手机跑 AI Agent 指南（快速上手）
 
+1. 打开 Termux，安装基础环境：
+   `pkg install python unzip -y`
+2. 克隆项目代码到本地：
+   `git clone https://github.com/zxxzxx1314/Z-agent-termux.git`
+3. 进入目录并配置 API 密钥（按提示粘贴自己的 Key）：
+   `cd Z-agent-termux && ./switch_api.sh`
+4. 一键启动智能体：
+   `./start_agent.sh`
+   ## 🧩 核心架构代码索引
+
+· [zguard/boot_guard.py](https://raw.githubusercontent.com/.../zguard/boot_guard.py)：看门狗，负责启动前快照与崩溃自动回滚。
+· [zguard/shadow_test.py](https://raw.githubusercontent.com/.../zguard/shadow_test.py)：影子沙箱，负责变异代码的逻辑安全验证。
 【第一步：环境准备】（仅需 3 分钟）
 
 1. 安装 Termux（推荐从 F-Droid 下载）。
