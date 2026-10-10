@@ -1,3 +1,10 @@
+![Python](https://img.shields.io/badge/Python-3.7%2B-blue)
+![Termux](https://img.shields.io/badge/Termux-Android-green)
+![Status](https://img.shields.io/badge/Status-Beta-orange)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+💡 为什么做这个项目？
+在 Android 手机上跑 AI Agent，最怕的就是“代码改崩了，救不回来”。
+本项目实现了看门狗（boot_guard）+ 影子沙箱（shadow_test），即便改到启动崩溃，也能自动回滚。这是一套带自愈能力的移动端 Agent 实验架构。
 > [!IMPORTANT]
 > **🎉 欢迎加入 Z-Agent 专属交流 QQ 群！**
 > 群号：**1072611451**
