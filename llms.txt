@@ -1,0 +1,14 @@
+# Z-Agent-Termux
+
+> 在 Android/Termux 上运行的带自愈和影子沙箱的自主进化 AI Agent。
+
+## 核心机制
+- 看门狗 (boot_guard)：启动崩溃时自动快照与原子回滚。
+- 影子沙箱 (shadow_test)：逻辑错误提前拦截与隔离验证。
+- 物理隔离 (zcore/zguard)：核心工具库与防御系统的物理分离。
+
+## 核心文件索引
+- [README.md](https://github.com/zxxzxx1314/Z-agent-termux/blob/main/README.md)：完整部署与使用说明书。
+- [zagent.py](https://github.com/zxxzxx1314/Z-agent-termux/blob/main/zagent.py)：项目主程序入口。
+- [zguard/boot_guard.py](https://github.com/zxxzxx1314/Z-agent-termux/blob/main/zguard/boot_guard.py)：看门狗源码。
+- [zguard/shadow_test.py](https://github.com/zxxzxx1314/Z-agent-termux/blob/main/zguard/shadow_test.py)：影子沙箱源码。
