@@ -30,6 +30,7 @@
 
 · [zguard/boot_guard.py](https://raw.githubusercontent.com/.../zguard/boot_guard.py)：看门狗，负责启动前快照与崩溃自动回滚。
 · [zguard/shadow_test.py](https://raw.githubusercontent.com/.../zguard/shadow_test.py)：影子沙箱，负责变异代码的逻辑安全验证。
+
 【第一步：环境准备】（仅需 3 分钟）
 
 1. 安装 Termux（推荐从 F-Droid 下载）。
