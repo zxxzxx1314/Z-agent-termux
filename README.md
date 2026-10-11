@@ -28,6 +28,10 @@ Z-Agent-Termux 以 shadow_test 与 boot_guard 双闸门防宕机：shadow_test �
 
 *(注：如果 raw.githubusercontent.com 打不开，请使用 GitHub 加速服务，或直接下载 ZIP 包手动解压)*
 
+> ⚠️ **如果上方一键部署无响应（大概率是 raw.githubusercontent.com 被墙），请务必使用以下两种备用方案：**
+> 1. 使用加速链接：`curl -sL https://ghproxy.com/https://raw.githubusercontent.com/zxxzxx1314/Z-agent-termux/main/deploy.sh | bash`
+> 2. 去 QQ 群（1072611451）下载 `deploy.sh` 脚本，在 Termux 里执行 `bash deploy.sh` 即可。
+
 ## 🚀 手动部署指南（备选）
 
 如果一键脚本无法运行，请手动执行：
