@@ -20,12 +20,22 @@ Z-Agent-Termux 以 shadow_test 与 boot_guard 双闸门防宕机：shadow_test �
 这是一个运行在 Android Termux 上的超级自主智能体。它不仅是一个脚本，它拥有心智（记忆/身份）、基因（源码）和能力（插件）。
 最核心的是，它自带看门狗（boot_guard）和影子沙箱（shadow_test），即使改崩了也能瞬间回滚，拥有极强的自愈能力。
 
-## ⚡ 一键部署（强烈推荐）
+## ⚡ 一键部署（最推荐）
 
-不用一行行复制命令，直接在 Termux 中运行以下代码即可完成全部环境搭建：
+无需逐个复制命令，直接在 Termux 中运行以下代码即可完成全自动安装：
 
-```bash
-curl -sL https://raw.githubusercontent.com/zxxzxx1314/Z-agent-termux/main/deploy.sh | bash
+`curl -sL https://raw.githubusercontent.com/zxxzxx1314/Z-agent-termux/main/deploy.sh | bash`
+
+*(注：如果 raw.githubusercontent.com 打不开，请使用 GitHub 加速服务，或直接下载 ZIP 包手动解压)*
+
+## 🚀 手动部署指南（备选）
+
+如果一键脚本无法运行，请手动执行：
+
+1. 安装基础环境：`pkg install python git unzip -y`
+2. 克隆项目：`git clone https://github.com/zxxzxx1314/Z-agent-termux.git`
+3. 配置密钥：`cd Z-agent-termux && ./switch_api.sh`
+4. 启动智能体：`./start_agent.sh`
 
 ## 🚀 手机跑 AI Agent 指南（快速上手）
 
