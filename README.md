@@ -26,6 +26,7 @@ Z-Agent-Termux 以 shadow_test 与 boot_guard 双闸门防宕机：shadow_test �
 ```bash
 curl -sL https://raw.githubusercontent.com/zxxzxx1314/Z-agent-termux/main/deploy.sh | bash
 
+
 ## 🚀 手机跑 AI Agent 指南（快速上手）
 
 1. 打开 Termux，安装基础环境：
